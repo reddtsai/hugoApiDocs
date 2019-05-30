@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/main/</loc>
+    <loc>https://reddtsai.github.io/hugoApiDocs/posts/main/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://reddtsai.github.io/hugoApiDocs/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://reddtsai.github.io/hugoApiDocs/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>https://reddtsai.github.io/hugoApiDocs/posts/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://reddtsai.github.io/hugoApiDocs/tags/</loc>
     <priority>0</priority>
   </url>
   
