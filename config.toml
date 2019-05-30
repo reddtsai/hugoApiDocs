@@ -1,1 +1,2 @@
 theme = "docuapi"
+baseurl = "https://reddtsai.github.io/hugoApiDocs/"
