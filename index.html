@@ -5,17 +5,17 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title></title>
+    <title>DocuAPI Example Site</title>
     <link href='/hugoApiDocs/slate/stylesheets/monokai.css' rel="stylesheet" media="screen" />
 <link href='/hugoApiDocs/slate/stylesheets/screen.css' rel="stylesheet" media="screen" />
 <link href='/hugoApiDocs/slate/stylesheets/print.css' rel="stylesheet" media="print" />
 
     
-<script src='/hugoApiDocs/slate/javascripts/all_nosearch.js'></script>
+<script src='/hugoApiDocs/slate/javascripts/all.js'></script>
 
     
 </head>
-<body class="index" data-languages="">
+<body class="index" data-languages="[ &#34;go&#34; ,  &#34;shell&#34; ,  &#34;ruby&#34; ,  &#34;python&#34; ,  &#34;javascript&#34; ]">
     <a href="#" id="nav-button">
         <span>
         NAV
@@ -25,11 +25,52 @@
     <div class="tocify-wrapper">
         
          <img src='/hugoApiDocs/images/logo.png' />
+        
+        <div class="lang-selector">
+            
+            <a href="#" data-language-name="go">Go</a>
+            
+            <a href="#" data-language-name="shell">Shell</a>
+            
+            <a href="#" data-language-name="ruby">Ruby</a>
+            
+            <a href="#" data-language-name="python">Python</a>
+            
+            <a href="#" data-language-name="javascript">Javascript</a>
+            
+        </div>
          
+        
+        <div class="search">
+            <input type="search" class="search" id="input-search" placeholder='Search'>
+        </div>
+        <ul class="search-results"></ul>
         
         <div id="toc">
         </div>
+        
+        <div class="toc-footer">
+            <h3 class="translations-title">Translation</h3> 
+            
+<ul>
+    
+        <li><a href="https://reddtsai.github.io/hugoApiDocs/nn/">Nynorsk</a></li>
+    
+</ul>
+
+
+        </div>
          
+        
+        <ul class="toc-footer">
+            
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            
+            <li>Documentation Powered by <a href="https://github.com/bep/docuapi" target="_blank">DocuAPI</a></li>
+            
+            <li>Hugo Theme by <a href="https://github.com/bep" target="_blank">bep</a></li>
+            
+        </ul>
         
         
     </div>
@@ -46,51 +87,37 @@
 
 <p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
-<p><strong>This example API documentation page was created with <a href="https://github.com/bep/docuapi/">DocuAPI</a>, a multilingual documentation theme for the static site generator <a href="http://gohugo.io/">Hugo</a>.</strong></p>
+<p><strong>This example API documentation page was created with <a href="https://github.com/bep/docuapi/" target="_blank">DocuAPI</a>, a multilingual documentation theme for the static site generator <a href="http://gohugo.io/" target="_blank">Hugo</a>.</strong></p>
 
 <h1 id="authentication">Authentication</h1>
 
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<pre><code class="language-go">package main
+<span class="kn">import</span> <span class="s">&#34;github.com/bep/kittn/auth&#34;</span>
 
-import &quot;github.com/bep/kittn/auth&quot;
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">api</span> <span class="o">:=</span> <span class="nx">auth</span><span class="p">.</span><span class="nf">Authorize</span><span class="p">(</span><span class="s">&#34;meowmeowmeow&#34;</span><span class="p">)</span>
 
-func main() {
-	api := auth.Authorize(&quot;meowmeowmeow&quot;)
+	<span class="c1">// Just to make it compile
+</span><span class="c1"></span>	<span class="nx">_</span> <span class="p">=</span> <span class="nx">api</span>
+<span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;kittn&#39;</span>
 
-	// Just to make it compile
-	_ = api
-}
-</code></pre>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="o">.</span><span class="n">authorize!</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">kittn</span>
 
-<pre><code class="language-ruby">require 'kittn'
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">&#34;api_endpoint_here&#34;</span>
+  -H <span class="s2">&#34;Authorization: meowmeowmeow&#34;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;kittn&#39;</span><span class="p">);</span>
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-</code></pre>
-
-<pre><code class="language-python">import kittn
-
-api = kittn.authorize('meowmeowmeow')
-</code></pre>
-
-<pre><code class="language-shell"># With shell, you can just pass the correct header with each request
-curl &quot;api_endpoint_here&quot;
-  -H &quot;Authorization: meowmeowmeow&quot;
-</code></pre>
-
-<pre><code class="language-javascript">const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-</code></pre>
-
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">);</span>
+</code></pre></div>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers" target="_blank">developer portal</a>.</p>
 
 <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
@@ -103,62 +130,45 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <h1 id="kittens">Kittens</h1>
 
 <h2 id="get-all-kittens">Get All Kittens</h2>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<pre><code class="language-go">package main
+<span class="kn">import</span> <span class="s">&#34;github.com/bep/kittn/auth&#34;</span>
 
-import &quot;github.com/bep/kittn/auth&quot;
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">api</span> <span class="o">:=</span> <span class="nx">auth</span><span class="p">.</span><span class="nf">Authorize</span><span class="p">(</span><span class="s">&#34;meowmeowmeow&#34;</span><span class="p">)</span>
 
-func main() {
-	api := auth.Authorize(&quot;meowmeowmeow&quot;)
+	<span class="nx">_</span> <span class="p">=</span> <span class="nx">api</span><span class="p">.</span><span class="nf">GetKittens</span><span class="p">()</span>
+<span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;kittn&#39;</span>
 
-	_ = api.GetKittens()
-}
-</code></pre>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="o">.</span><span class="n">authorize!</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">kittn</span>
 
-<pre><code class="language-ruby">require 'kittn'
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">curl <span class="s2">&#34;http://example.com/api/kittens&#34;</span>
+  -H <span class="s2">&#34;Authorization: meowmeowmeow&#34;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;kittn&#39;</span><span class="p">);</span>
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-</code></pre>
-
-<pre><code class="language-python">import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-</code></pre>
-
-<pre><code class="language-shell">curl &quot;http://example.com/api/kittens&quot;
-  -H &quot;Authorization: meowmeowmeow&quot;
-</code></pre>
-
-<pre><code class="language-javascript">const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-</code></pre>
-
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-
-<pre><code class="language-json">[
-  {
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Fluffums&quot;,
-    &quot;breed&quot;: &quot;calico&quot;,
-    &quot;fluffiness&quot;: 6,
-    &quot;cuteness&quot;: 7
-  },
-  {
-    &quot;id&quot;: 2,
-    &quot;name&quot;: &quot;Max&quot;,
-    &quot;breed&quot;: &quot;unknown&quot;,
-    &quot;fluffiness&quot;: 5,
-    &quot;cuteness&quot;: 10
-  }
-]
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Fluffums&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;breed&#34;</span><span class="p">:</span> <span class="s2">&#34;calico&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;fluffiness&#34;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&#34;cuteness&#34;</span><span class="p">:</span> <span class="mi">7</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Max&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;breed&#34;</span><span class="p">:</span> <span class="s2">&#34;unknown&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;fluffiness&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&#34;cuteness&#34;</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="p">}</span>
+<span class="p">]</span></code></pre></div>
 <p>This endpoint retrieves all kittens.</p>
 
 <h3 id="http-request">HTTP Request</h3>
@@ -196,53 +206,36 @@ Remember — a happy kitten is an authenticated kitten!
 </aside>
 
 <h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<pre><code class="language-go">package main
+<span class="kn">import</span> <span class="s">&#34;github.com/bep/kittn/auth&#34;</span>
 
-import &quot;github.com/bep/kittn/auth&quot;
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">api</span> <span class="o">:=</span> <span class="nx">auth</span><span class="p">.</span><span class="nf">Authorize</span><span class="p">(</span><span class="s">&#34;meowmeowmeow&#34;</span><span class="p">)</span>
 
-func main() {
-	api := auth.Authorize(&quot;meowmeowmeow&quot;)
+	<span class="nx">_</span> <span class="p">=</span> <span class="nx">api</span><span class="p">.</span><span class="nf">GetKitten</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;kittn&#39;</span>
 
-	_ = api.GetKitten(2)
-}
-</code></pre>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="o">.</span><span class="n">authorize!</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">kittn</span>
 
-<pre><code class="language-ruby">require 'kittn'
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">curl <span class="s2">&#34;http://example.com/api/kittens/2&#34;</span>
+  -H <span class="s2">&#34;Authorization: meowmeowmeow&#34;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;kittn&#39;</span><span class="p">);</span>
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-</code></pre>
-
-<pre><code class="language-python">import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-</code></pre>
-
-<pre><code class="language-shell">curl &quot;http://example.com/api/kittens/2&quot;
-  -H &quot;Authorization: meowmeowmeow&quot;
-</code></pre>
-
-<pre><code class="language-javascript">const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-</code></pre>
-
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">&#39;meowmeowmeow&#39;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-
-<pre><code class="language-json">{
-  &quot;id&quot;: 2,
-  &quot;name&quot;: &quot;Max&quot;,
-  &quot;breed&quot;: &quot;unknown&quot;,
-  &quot;fluffiness&quot;: 5,
-  &quot;cuteness&quot;: 10
-}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Max&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;breed&#34;</span><span class="p">:</span> <span class="s2">&#34;unknown&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;fluffiness&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="nt">&#34;cuteness&#34;</span><span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span></code></pre></div>
 <p>This endpoint retrieves a specific kitten.</p>
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
@@ -273,6 +266,20 @@ let max = api.kittens.get(2);
 
         </div>
         <div class="dark-box">
+            
+            <div class="lang-selector">
+                
+                <a href="#" data-language-name="go">Go</a>
+                
+                <a href="#" data-language-name="shell">Shell</a>
+                
+                <a href="#" data-language-name="ruby">Ruby</a>
+                
+                <a href="#" data-language-name="python">Python</a>
+                
+                <a href="#" data-language-name="javascript">Javascript</a>
+                
+            </div>
             
         </div>
     </div>

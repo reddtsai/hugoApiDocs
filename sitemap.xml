@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://reddtsai.github.io/hugoApiDocs/posts/main/</loc>
-  </url>
-  
-  <url>
-    <loc>https://reddtsai.github.io/hugoApiDocs/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://reddtsai.github.io/hugoApiDocs/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://reddtsai.github.io/hugoApiDocs/posts/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://reddtsai.github.io/hugoApiDocs/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>https://reddtsai.github.io/hugoApiDocs/nn/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://reddtsai.github.io/hugoApiDocs/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>

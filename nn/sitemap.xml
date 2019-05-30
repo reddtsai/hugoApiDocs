@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://reddtsai.github.io/hugoApiDocs/nn/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reddtsai.github.io/hugoApiDocs/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nn"
+                href="https://reddtsai.github.io/hugoApiDocs/nn/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://reddtsai.github.io/hugoApiDocs/nn/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reddtsai.github.io/hugoApiDocs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nn"
+                href="https://reddtsai.github.io/hugoApiDocs/nn/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://reddtsai.github.io/hugoApiDocs/nn/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://reddtsai.github.io/hugoApiDocs/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nn"
+                href="https://reddtsai.github.io/hugoApiDocs/nn/tags/"
+                />
+  </url>
+  
+</urlset>
