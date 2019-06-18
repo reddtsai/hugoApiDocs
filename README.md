@@ -10,8 +10,18 @@ Create api docs using HUGO
 
 ### Step 1 Install Hugo
 
+macOS
+
 ```bash
 brew hugo
+hugo version
+```
+
+Windows
+
+```bash
+choco install hugo -confirm
+hugo version
 ```
 
 ### Step 2 Create a new site
